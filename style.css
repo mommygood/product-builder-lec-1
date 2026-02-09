@@ -1,1 +1,29 @@
-/* Add styles here */
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+#c {
+	width: 100%;
+	height: 100%;
+	display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2em;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+}
