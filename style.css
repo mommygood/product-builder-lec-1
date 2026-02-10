@@ -55,6 +55,15 @@ h1 {
     margin: 0 auto;
 }
 
+#stretch-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block; /* Ensures it's centered if max-width is less than parent */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 #timer-container {
     margin-top: 30px;
     padding-top: 20px;

@@ -18,12 +18,13 @@ This project implements a simple, single-page web application designed to encour
 *   **Regular Intervals**: A new stretch is presented every 30 minutes.
 *   **Break Time Indicator**: Between stretch sessions, a "break time" message is shown.
 *   **Dynamic Updates**: The content and timer update automatically without page reloads.
+*   **Image Display**: During the 5-minute stretch, a relevant image will be displayed alongside the stretch description.
 
 ## Current Implementation Plan (for current request)
 
 ### Objective
 
-To create a functional web application that cycles through office stretching exercises at timed intervals, and prepare it for deployment.
+To enhance the web application by displaying a relevant image for each stretching exercise during its active display period.
 
 ### Steps
 
@@ -31,17 +32,19 @@ To create a functional web application that cycles through office stretching exe
 2.  **Generate Stretching Exercises**: Define 10 office-friendly stretching exercises.
 3.  **Modify `index.html`**:
     *   Add a main container for the application.
-    *   Include elements to display the stretch name, description, and a countdown timer.
+    *   Include elements to display the stretch name, description, an image, and a countdown timer.
     *   Link `style.css` and `main.js`.
 4.  **Create `style.css`**:
     *   Apply basic styling for a modern look (fonts, colors, spacing).
     *   Implement responsive design using media queries if necessary.
     *   Center content on the page for a clean presentation.
+    *   Add styling for the new `<img>` tag to ensure it's properly sized and positioned.
 5.  **Create `main.js`**:
-    *   Define an array of stretch objects (`name`, `description`).
-    *   Implement `displayRandomStretch()` to update HTML with exercise details.
+    *   Define an array of stretch objects (`name`, `description`, `image_url`).
+    *   Implement `displayRandomStretchAndTimers()` to update HTML with exercise details and set the `src` attribute of the image element.
     *   Implement `updateTimerDisplay()` to format and show remaining time.
     *   Set up `setInterval` and `setTimeout` to manage the 30-minute cycle (5 min stretch, 25 min break).
     *   Handle initial load to immediately display the first stretch.
+
 6.  **Git Commit**: Stage and commit all changes to the local Git repository.
 7.  **Cloudflare Pages Deployment Instructions**: Provide instructions for the user to deploy the project to Cloudflare Pages.
