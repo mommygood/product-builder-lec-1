@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced 3D Scene</title>
+    <title>Office Stretch Break</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Enhanced 3D Scene</h1>
+    <div id="stretch-app">
+        <h1>Office Stretch Break</h1>
+        <div id="stretch-content">
+            <h2 id="stretch-name"></h2>
+            <p id="stretch-description"></p>
+        </div>
+        <div id="timer-container">
+            <p id="timer-label">Next stretch in:</p>
+            <p id="timer-display">00:00</p>
+        </div>
     </div>
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-            }
-        }
-    </script>
-    <canvas id="c"></canvas>
-    <script type="module" src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

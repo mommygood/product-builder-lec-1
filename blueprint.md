@@ -1,37 +1,47 @@
-# Project Blueprint
+# Office Stretching Routine Web App
 
-## Overview
+## Project Overview
 
-A visually appealing web application that showcases modern web technologies, including Web Components, modern CSS, and Three.js for 3D graphics. The application will be designed with a focus on aesthetics, responsiveness, and interactivity, following the guidelines in `GEMINI.md`.
+This project implements a simple, single-page web application designed to encourage regular stretching breaks for office workers. It displays a random stretching exercise for 5 minutes, every 30 minutes, with a "break time" message in between. The application is built using modern web standards (HTML, CSS, JavaScript) and is intended for easy deployment to platforms like Cloudflare Pages.
 
-## Current Plan
+## Design Principles
 
-**Objective:** Enhance the 3D scene to make it more visually interesting and interactive.
+*   **Clean and Modern UI**: A minimalist design focusing on readability and ease of understanding.
+*   **Responsiveness**: The layout will adapt to different screen sizes, from mobile phones to desktop monitors.
+*   **Accessibility**: Basic accessibility considerations for text contrast and readability will be applied.
+*   **Visual Cues**: Clear indication of the current exercise, remaining time, and transition states (e.g., break time).
 
-**Steps:**
+## Features
 
-1.  **HTML updates (`index.html`):**
-    *   Add a title to the page.
-    *   Import `OrbitControls` from Three.js examples for camera manipulation.
-2.  **Scene Enhancement (`main.js`):**
-    *   Add multiple objects with different geometries and materials.
-    *   Add `AmbientLight` for softer overall illumination.
-    *   Implement `OrbitControls` to allow the user to rotate, pan, and zoom the camera.
-3.  **Styling (`style.css`):**
-    *   Add a title heading and style it.
-    *   Style the main container to create a more polished look and feel.
+*   **Random Stretch Display**: Selects one of 10 pre-defined office stretches randomly.
+*   **Timed Display**: Each stretch is displayed for 5 minutes.
+*   **Regular Intervals**: A new stretch is presented every 30 minutes.
+*   **Break Time Indicator**: Between stretch sessions, a "break time" message is shown.
+*   **Dynamic Updates**: The content and timer update automatically without page reloads.
 
-## Project Outline
+## Current Implementation Plan (for current request)
 
-### Design and Styles
+### Objective
 
-*   **Aesthetics:** Clean, modern design with a focus on visual balance and spacing. A subtle noise texture will be applied to the background to add a premium feel.
-*   **Color Palette:** A vibrant and energetic color palette is used for the 3D objects.
-*   **Typography:** Expressive and readable fonts are used for the title.
-*   **Layout:** Responsive and adaptive to different screen sizes.
-*   **Visual Effects:** Multi-layered drop shadows will be used to create a sense of depth for UI elements.
+To create a functional web application that cycles through office stretching exercises at timed intervals, and prepare it for deployment.
 
-### Features
+### Steps
 
-*   **Interactive 3D Scene:** An interactive 3D scene rendered with Three.js, with camera controls.
-*   **Web Components:** Reusable UI components for a modular structure (to be implemented).
+1.  **Create `blueprint.md`**: (Already in progress) Document the project and current plan.
+2.  **Generate Stretching Exercises**: Define 10 office-friendly stretching exercises.
+3.  **Modify `index.html`**:
+    *   Add a main container for the application.
+    *   Include elements to display the stretch name, description, and a countdown timer.
+    *   Link `style.css` and `main.js`.
+4.  **Create `style.css`**:
+    *   Apply basic styling for a modern look (fonts, colors, spacing).
+    *   Implement responsive design using media queries if necessary.
+    *   Center content on the page for a clean presentation.
+5.  **Create `main.js`**:
+    *   Define an array of stretch objects (`name`, `description`).
+    *   Implement `displayRandomStretch()` to update HTML with exercise details.
+    *   Implement `updateTimerDisplay()` to format and show remaining time.
+    *   Set up `setInterval` and `setTimeout` to manage the 30-minute cycle (5 min stretch, 25 min break).
+    *   Handle initial load to immediately display the first stretch.
+6.  **Git Commit**: Stage and commit all changes to the local Git repository.
+7.  **Cloudflare Pages Deployment Instructions**: Provide instructions for the user to deploy the project to Cloudflare Pages.
